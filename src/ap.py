@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from flask_mysqldb import MySQL
 
 
@@ -11,24 +11,46 @@ mysql = MySQL(app)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
-
-
-@app.route('/add_contact', methods=['POST'])
-def add_contact():
-    if request.method == 'POST':
-        fullname = request.form['fullname']
-        phone = request.form['phone']
-        email = request.form['email']
-        print(fullname)
-        print(phone)
-        print(email)
+        
         cur = mysql.connection.cursor()
-        cur.execute('INSERT INTO empleados (nombre, correo, foto) VALUES (%s, %s, %s)', 
-                    (fullname, phone, email))
+
+        sql = "SELECT * FROM empleados;"
+        cur.execute(sql)
         mysql.connection.commit()
 
-        return "receeived"
+        empleados = cur.fetchall()
+        print(empleados)
+
+        return render_template('index.html', empleados=empleados)
+
+
+
+@app.route('/create')
+def create():
+        return render_template("create.html")
+
+
+
+@app.route('/store', methods=["POST"])
+def store():
+     nombre = request.form["txtnombre"]
+     correo = request.form["txtcorreo"]
+     foto = request.files["txtfoto"]
+
+     print(nombre)
+     print(correo)
+     print(foto)
+
+     cur = mysql.connection.cursor()
+     cur.execute('INSERT INTO empleados (nombre, correo, foto) VALUES (%s, %s, %s)', 
+                       (nombre, correo, foto.filename))
+     mysql.connection.commit()
+
+     return redirect('/')
+
+
+
+     
     
 
 if __name__ == '__main__':
