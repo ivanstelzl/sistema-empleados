@@ -1,15 +1,46 @@
-<form action="/store" method="POST" enctype="multipart/form-data">
+{% include 'header.html' %}
 
-    <label for="txtnombre">Nombre:</label>
-    <input type="text" name="txtnombre" id="txtnombre">
-    <br>
-    <label for="txtcorreo">Email:</label>
-    <input type="email" name="txtcorreo" id="txtcorreo">
-    <br>
-    <label for="txtfoto">Foto de perfil:</label>
-    <input type="file" name="txtfoto" id="txtfoto">
-    <br>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="alert alert-danger" role="alert">
+            {% for msg in messages %}
+                {{msg}}
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
 
-    <input type="submit" value="Agregar nuevo empleado">
+<form action="/Empleados/crearEmpleado" method="POST" enctype="multipart/form-data">
 
+<div class="añadirEmp">
+  
+    <div class="Formulario">
+
+            <div class="AñaEmpleado">
+                <h2>Añadir empleado</h2>
+            </div>
+            
+            <div>
+                <label for="txtnombre">Nombre:</label>
+                <input class="formInput" type="text" name="txtnombre" id="txtnombre">
+            </div>
+            <div>
+                <label for="txtcorreo">Email:</label>
+                <input class="formInput" type="email" name="txtcorreo" id="txtcorreo">            
+            </div>
+            <div>
+                <label for="txtfoto">Foto de perfil:</label>
+                <input type="file" name="txtfoto" id="txtfoto">            
+            </div>
+            <div class="botones">
+                <input class="btn btn-success" type="submit" value="Agregar nuevo empleado">
+                <a class="btn btn-primary" href="{{url_for('index')}}">Regresar</a>
+        
+            </div>
+    </div>
+
+
+</div>
 </form>
+
+{% include 'footer.html' %}

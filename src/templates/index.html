@@ -1,32 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema empleados</title>
-</head>
-<body>
 
-    <h1>Hola Flask</h1>
+{% include 'header.html' %}
 
-    <table>
-        <tr>
-            <th>#</th>
-            <th>Foto</th>
-            <th>Nombre</th>
-            <th>Correo</th>
-        </tr>
+<h1 class="tit">Tabla de empleados</h1>
+
+    <table class="tablaEmpleados">
+        <thead>
+            <tr class="Encabezado">
+                <th><h5>#</h5</th>
+                <th><h5>Foto</h5</th>
+                <th><h5>Nombre</h5</th>
+                <th><h5>Correo</h5</th>
+            </tr>
+        </thead>
         <tbody>
             {% for empleado in empleados %}
             <tr>
                 <td>{{empleado[0]}}</td>
-                <td>{{empleado[3]}}</td>
+                <td>
+                    <img width="100" src="fotodeusuario/{{empleado[3]}}" alt="foto de perfil">
+                </td>
                 <td>{{empleado[1]}}</td>
                 <td>{{empleado[2]}}</td>
+                <td>
+                    <a class="btn btn-success" href="">Mostrar más</a>
+                </td>
+                <td>
+                    <a class="btn btn-warning" href="/modify/{{empleado[0]}}">Editar</a>
+                    
+                    <a id="btnConfirm" class="btn btn-danger" href="/delete/{{empleado[0]}}">Borrar</a>
+                </td>
             </tr>
+            <tr class="oculto">
+                <td>hola</td>
+            </tr>
+            
+            
             {% endfor %}
         </tbody>
     </table>
     
-</body>
-</html>
+    {% include 'footer.html' %}

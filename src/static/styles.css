@@ -1,0 +1,244 @@
+/* td{
+    vertical-align: middle !important;
+} */
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color:#127369;
+    height: 6rem;
+    margin-bottom: 4rem;
+}
+
+.titulo img{
+    height: 70%;
+    margin-left: 0.6rem;
+}
+
+.sebe{
+animation: jackInTheBox;
+animation-duration: 1s;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0.2rem;
+}
+
+.titulo:hover{
+    background-color: #10403B;
+    transition: .6s ease all;
+}
+
+nav h1 a{
+    font-family: "Galada", cursive;
+    font-weight: 400;
+    font-style: normal;
+    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+nav td{
+    border-bottom: solid 0.2rem #127369;
+    animation: backInDown;
+    animation-duration: 1s;
+}
+
+#a{
+    text-decoration: none;
+    margin: 1.2rem;
+    font-size: 1.5rem;
+    color: #BFBFBF;
+    font-family: "KoHo", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+}
+
+.prod:hover, .ubi:hover, .ini:hover, .contac:hover{
+    border-bottom: solid 0.2rem white;
+    transition: .6s ease all;
+
+}
+
+#a:hover{
+    color: white;
+    transition: .6s ease all;
+
+}
+
+.b{
+    color: white;
+    text-decoration: none;
+    margin: 1.2rem;
+    font-size: 1.5rem;
+    font-family: "KoHo", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+}
+
+.ini{
+    border-bottom: solid 0.2rem white;
+}
+
+.b:hover{
+    color: white;
+}
+
+
+
+
+
+
+
+.tit{
+    font-family: "Fenix", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.tablaEmpleados{
+    width: 90%;
+    margin: auto;
+    border-spacing: 10px;
+}
+
+.Encabezado{
+    padding: 20px;
+    background-color: #8AA6A3;
+    
+}
+
+th{
+    font-family: "Fenix", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.tablaEmpleados td, .tablaEmpleados th{
+    vertical-align: middle !important;
+    text-align: center;
+    padding: 10px;
+}
+
+.oculto{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+body{
+    background-color: #F2F2F2;
+}
+
+.Formulario{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+    font-family: "Fenix", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.botones, .AñaEmpleado{
+    grid-column: span 2;
+}
+
+.formInput{
+    width: 100%;
+    background: #fff;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 45px 0 10px;
+    transition: .3s ease all;
+
+}
+
+.formInput:focus{
+    border: 3px solid #0075ff;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    height: 10rem;
+    background-color: #127369;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 9rem;
+    margin-bottom: 0;
+}
+
+.footer h1, .footer a{
+    color: white;
+    font-size: 0.9rem;
+    margin: 2rem;
+    font-family: "KoHo", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.footer div{
+    display: inline;
+}
+
+
+.logos{
+    margin: 0.4rem;
+    border-radius: 100%;
+    background-color: #10403B;
+    padding: 0.9rem;
+    text-align: center;
+}
+
+.log:hover{
+    .logos{
+        background-color: #8AA6A3;
+        transition: .9 ease all;
+    }
+    }
