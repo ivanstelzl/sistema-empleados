@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema empleados</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+    <script src="{{url_for('static', filename='index.js')}}" defer></script>
+    <script src="https://kit.fontawesome.com/4a0b9642b1.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Galada&family=Gugi&family=Julius+Sans+One&family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Petit+Formal+Script&family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Galada&family=Gugi&family=Julius+Sans+One&family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Petit+Formal+Script&family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Fenix&family=Galada&family=Gugi&family=Julius+Sans+One&family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Petit+Formal+Script&family=Questrial&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+
+      <header>
+
+        <nav>
+
+            <div class="titulo">
+                <h1><a  href="{{url_for('index')}}" class="sebe">Se Be delicioso</a></h1>
+
+            </div>
+
+            <table>
+                <tr>
+                    <td name="a" id="a" class="busqueda"><a class="a" href="{{url_for('index')}}">Empleados</a></td>
+                    <td id="b" class="busqueda"><a class="a" href="{{url_for('alta_empleado')}}">Alta empleados</a></td>
+                </tr>
+            </table>
+        </nav>
+    </header>
+
+
+    <div class="tabla">

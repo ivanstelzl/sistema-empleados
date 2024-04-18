@@ -1,0 +1,74 @@
+{% include 'header.html' %}
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="alert alert-danger" role="alert">
+            {% for msg in messages %}
+                {{msg}}
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
+
+<form action="/Empleados/crearEmpleado" method="POST" enctype="multipart/form-data">
+  
+    <div class="Formulario">
+
+            <div class="AñaEmpleado">
+                <h2>Añadir empleado</h2>
+            </div>
+            
+            <div class="inpFormu">
+                <label for="txtnombre">Nombre:</label>
+                <input class="formInput" type="text" name="txtnombre" id="txtnombre">
+            </div>
+            <div class="inpFormu">
+                <label for="txtcorreo">Email:</label>
+                <input class="formInput" type="email" name="txtcorreo" id="txtcorreo">            
+            </div>
+
+            <div class="inpFormu">
+                <label for="txtDomicilio">Domicilio:</label>
+                <input class="formInput" type="text" name="txtDomicilio" id="txtDomicilio">            
+            </div>
+
+            <div class="inpFormu">
+                <label for="txtNacimiento">Fecha de nacimiento:</label>
+                <input class="formInput" type="date" name="txtNacimiento" id="txtNacimiento">            
+            </div>
+
+            <div class="inpFormu">
+                <label for="txtIngreso">Fecha de ingreso:</label>
+                <input class="formInput" type="date" name="txtIngreso" id="txtIngreso">            
+            </div>
+
+
+            <div class="inpFormu">
+                <label for="txtCargo">Cargo:</label>
+                <select class="formInput" type="text" name="txtCargo" id="txtCargo">
+                    <option value="Chef">Chef</option>
+                    <option value="Cocinero/a">Cocinero/a</option>      
+                    <option value="Administracion">Administracion</option>      
+            </div>
+
+            <div class="inpFormu">
+                <label for="txtFoto">Foto de perfil: </label>
+                    <input type="file" name="txtFoto" id="txtFoto">            
+            </div>
+
+            <div class="botones">
+            
+                    <input class="btn btn-success" type="submit" value="Agregar nuevo empleado">
+                    <a class="btn btn-primary" href="{{url_for('index')}}">Regresar</a>
+            
+            </div>
+
+            
+
+    </div>
+
+
+</form>
+
+
+{% include 'footer.html' %}

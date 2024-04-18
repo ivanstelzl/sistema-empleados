@@ -1,0 +1,63 @@
+{% include 'header.html' %}
+
+<form action="/update" method="POST" enctype="multipart/form-data">
+
+    
+    <div class="Formulario">
+
+        <div class="AñaEmpleado">
+            <h2>Modificar empleado</h2>
+        </div>
+        
+                <input hidden type="text" value="{{empleado[0]}}" name="txtid" id="txtid">
+                <div class="inpFormu">        
+                    <label for="txtnombre">Nombre:</label>
+                    <input class="formInput" type="text" name="txtnombre" id="txtnombre" value="{{empleado[1]}}">
+                </div>
+
+                <div class="inpFormu">
+                    <label for="txtcorreo">Email:</label>
+                    <input class="formInput" type="email" name="txtcorreo" id="txtcorreo" value="{{empleado[2]}}">
+                </div>  
+
+                <div class="inpFormu">
+                    <label for="txtDomicilio">Domicilio:</label>
+                    <input class="formInput" type="text" name="txtDomicilio" id="txtDomicilio" value="{{empleado[4]}}" >            
+                </div>
+    
+                <div class="inpFormu">
+                    <label for="txtNacimiento">Fecha de nacimiento:</label>
+                    <input class="formInput" type="date" name="txtNacimiento" id="txtNacimiento" value="{{empleado[5]}}">            
+                </div>
+
+                <div class="inpFormu">
+                    <label for="txtIngreso">Fecha de ingreso:</label>
+                    <input class="formInput" type="date" name="txtIngreso" id="txtIngreso" value="{{empleado[6]}}">            
+                </div>
+
+                <div class="inpFormu">
+                    <label for="txtCargo">Cargo:</label>
+                    <select class="formInput" type="text" name="txtCargo" id="txtCargo" value="{{empleado[7]}}">
+                        <option value="Chef">Chef</option>
+                        <option value="Cocinero/a">Cocinero/a</option>      
+                        <option value="Administracion">Administracion</option>      
+                </div>
+
+                <div class="inpFormu" id="grupofoto">  
+                    <label for="txtfoto">Foto de perfil:</label>
+                    <img id="imgfoto" class="img-thumbnail" width="100" alt="foto de perfil" src="{{ url_for('uploads', foto=empleado[3])}}">
+                    <input type="file" name="txtfoto" id="txtFoto">
+                </div>
+
+                <div class="inpFormu" class="botones">
+                    <input class="btn btn-success" type="submit" value="Modificar empleado">
+                    <a class="btn btn-primary" href="{{url_for('index')}}">Regresar</a>
+                </div>
+    
+                
+    </div>
+
+
+</form>
+
+{% include 'footer.html' %}

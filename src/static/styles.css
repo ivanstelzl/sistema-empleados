@@ -1,0 +1,813 @@
+/* td{
+    vertical-align: middle !important;
+} */
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color:#127369;
+    height: 6rem;
+    margin-bottom: 4rem;
+}
+
+.titulo img{
+    height: 70%;
+    margin-left: 0.6rem;
+}
+
+.sebe{
+animation: jackInTheBox;
+animation-duration: 1s;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0.2rem;
+    text-decoration: none;
+}
+
+.titulo:hover{
+    background-color: #10403B;
+    transition: .6s ease all;
+}
+
+nav h1 a{
+    font-family: "Galada", cursive;
+    font-weight: 400;
+    font-style: normal;
+    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+nav h1 a:hover{
+    font-family: "Galada", cursive;
+    font-weight: 400;
+    font-style: normal;
+    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.busqueda{
+    border-bottom: solid 0.2rem #127369;
+    animation: backInDown;
+    animation-duration: 1s;
+}
+
+.busqueda_activo{
+    border-bottom: solid 0.2rem white;
+    transition: .6s ease all;
+    .a{
+        color: white;
+        transition: .6s ease all;
+        text-decoration: none;
+    }
+}
+
+.busqueda:hover{
+    border-bottom: solid 0.2rem white;
+    transition: .6s ease all;
+    .a{
+        color: white;
+        transition: .6s ease all;
+        text-decoration: none;
+    }
+    
+}
+.a{
+    text-decoration: none;
+    margin: 1.2rem;
+    font-size: 1.5rem;
+    color: #BFBFBF;
+    font-family: "KoHo", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+}
+
+
+
+
+
+
+
+
+
+.tit{
+    font-family: "Fenix", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+thead{
+    background-color: #8AA6A3;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+    border-radius: 3px;
+}
+
+.tablaEmpleados{
+    width: 90%;
+    margin: auto;
+
+}
+
+.Encabezado th{
+    font-family: "Fenix", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+
+
+}
+
+.tablaEmpleados td, .tablaEmpleados th{
+    vertical-align: middle !important;
+    text-align: center;
+    padding: 20px;
+}
+
+.tablaEmpleados td{
+    border: solid gainsboro 0.1rem
+}
+
+
+
+
+
+
+
+.grid-mostrar{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    margin: auto;
+    gap: 1rem;
+}
+
+.dato-empleado-foto{
+
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.dato-empleado-foto img{
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.dato-empleado{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width: 70%;
+    background-color: #8FC1B5;
+    border-radius: 3px;
+    text-align: center;
+    border: 20px solid #F2F2F2;
+}
+
+.dato-empleado td{
+    padding: 10px;
+
+
+}
+
+.dato-empleado h4{
+    text-align: center;
+}
+
+
+.flex{
+    display: flex;
+    justify-content: center;
+}
+
+#botonRegresar{
+    margin-top: 3rem;
+    width: 20%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+body{
+    background-color: #F2F2F2;
+}
+
+.Formulario{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+    font-family: "Fenix", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.botones, .AñaEmpleado{
+    grid-column: span 2;
+}
+
+
+.botones{
+    display: flex;
+    justify-content: center;
+
+}
+
+.botones a, .botones input{
+    margin: 20px;
+}
+
+
+.formInput{
+    width: 100%;
+    background: #fff;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 45px 0 10px;
+    transition: .3s ease all;
+
+}
+
+.formInput:focus{
+    border: 3px solid #0075ff;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+#txtFoto{
+    margin-top: 40px;
+}
+
+#imgfoto{
+    margin-right: 20px;
+    margin-left: 20px;
+
+}
+
+#grupofoto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.grupobotones{
+    display: flex;
+    margin: 2rem;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    height: 10rem;
+    background-color: #127369;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 7rem;
+    margin-bottom: 0;
+}
+
+.footer h1, .footer a{
+    color: white;
+    font-size: 0.9rem;
+    margin: 2rem;
+    font-family: "KoHo", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.footer div{
+    display: inline;
+}
+
+
+.logos{
+    margin: 0.4rem;
+    border-radius: 100%;
+    background-color: #10403B;
+    padding: 0.9rem;
+    text-align: center;
+}
+
+.log:hover{
+    .logos{
+        background-color: #8AA6A3;
+        transition: .9 ease all;
+    }
+    }
+
+
+
+
+
+
+
+
+
+    @media screen and (max-width: 1023px){
+    
+        .titulo img{
+            height: 50%;
+            width: 20%;
+            margin-left: 0.2rem;
+    }
+
+    .titulo h1 a{
+        font-size: 1.3rem;
+        margin-left: 10px;
+    }
+
+
+    .tit{
+        font-size: 1.7rem;
+        margin-top: 1,5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    
+        .titulo{
+            margin-right: 0;
+        }
+    
+        .a{
+            font-size: 1rem;
+            margin: 0.4rem;
+            padding: 0.2rem;
+    
+        }
+    
+        .a{
+            font-size: 1rem;
+            margin: 0.4rem;
+            padding: 0.2rem;
+        }
+
+        nav{
+            margin-bottom: 1rem;
+        }
+    
+
+    
+        /*  */
+
+
+        #btnConfirm{
+            margin-top: 5px;
+        }
+
+        .AñaEmpleado{
+            margin: 0;
+        }
+    
+        .Formulario{
+            grid-template-columns: 1fr;
+            width: 90%;
+        }
+    
+        .botones, .AñaEmpleado{
+        grid-column: 1;
+    }
+    
+
+    
+
+    
+    
+        /*  */
+
+
+
+        .footer{
+            height: 20rem;
+            background-color: #127369;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+    
+        .footer h1, .footer a{
+            color: white;
+            font-size: 1rem;
+            margin: 0;
+            font-family: "KoHo", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+            text-decoration: none;
+            text-align: center;
+            
+        }
+    
+        .footer a{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+    
+        .footer h1{
+            width: 30%;
+            height: 100%;
+            text-align: center;
+            display: block;
+        }
+    
+        .footer i{
+            text-align: center;
+            padding-top: 0.2rem;
+            padding-bottom: 0.2rem;
+            text-align: center;
+        }
+    
+        .logos{
+            margin: 0;
+            background-color: #10403B;
+            padding: 0;
+            border-radius: 0;
+            border: solid white 0.1rem;
+        }
+    
+        .footer div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 0.5rem;
+            width: 100%;
+            height: fit-content;
+        }
+    
+    }
+
+
+
+
+
+
+
+
+    @media screen and (max-width: 591px){
+    
+        .titulo img{
+            height: 50%;
+            width: 40px;
+            margin-left: 0.3rem;
+            margin-right: 0.3rem;
+    }
+    
+    nav{
+        height: 5rem;
+    }
+    
+        .sebe{
+            font-size: 0.9rem;
+            margin: 0;
+        }
+    
+    
+        .titulo{
+            margin-right: 0;
+        }
+    
+        .a{
+            font-size: 0.6rem;
+            margin: 0.1rem;
+            padding: 0.2rem;
+    
+        }
+    
+        .a{
+            font-size: 0.6rem;
+            margin: 0.1rem;
+            padding: 0.2rem;
+        }
+    
+        /*  */
+        
+        
+    
+        /*  */
+    
+        .Formulario{
+            grid-template-columns: 1fr;
+            width: 90%;
+            margin: auto;
+            padding: 0;
+        }
+
+        .AñaEmpleado h2{
+            font-size: 1.3rem;
+        }
+
+        #txtFoto{
+            width: 100%;
+            margin-top: 1.4rem;
+        }
+
+        #grupofoto{
+            width: 90%;
+            margin: 0;
+        }
+        #grupofoto label{
+            font-size: 0.8rem;
+            margin: 0;
+        }
+
+        #imgfoto{
+            width: 50px;
+            margin: 0;
+        }
+
+        .inpFormu{
+            width: 100%;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .Formulario label{
+            margin-left: 5px;
+        }
+
+    
+        .botones, .AñaEmpleado
+        {
+            grid-column: 1;
+        }
+
+        .botones{
+            width: 90%;
+            font-size: 0.4rem;
+
+        }
+
+        .botones a, .botones input{
+            margin: 0.2rem !important;
+            font-size: 0.8rem !important;
+            padding: 0.3rem !important;
+        }
+    
+        .formInput{
+            width: 100%;
+            background: #fff;
+            border: 3px solid transparent;
+            border-radius: 3px;
+            height: 45px;
+            line-height: 45px;
+            padding: 0 0 0 10px;
+            transition: .3s ease all;
+            margin: 0;
+            
+        }
+
+        .AñaEmpleado{
+            width: 100%;
+        }
+
+        #txtfoto{
+            font-size: 0.9rem;
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        
+        .grupobotones{
+            display: flex;
+            margin-top: 1rem;
+            font-size: 1rem;
+            justify-content: center;
+        }
+        
+        .grupobotones input, .grupobotones a{
+            margin: 5px;
+            font-size: 1rem !important;
+            
+        }
+        /*  */
+
+
+    
+    .tablaEmpleados img{
+        width: 60px;
+    }
+
+    .tablaEmpleados td{
+        font-size: 0.6rem;
+    }
+     
+    .tablaEmpleados{
+        width: fit-content;
+        border-spacing: 0.1rem;
+        font-family: "Fenix", serif;
+        font-weight: 400;
+        font-style: normal;
+        background-color: white;
+        border-radius: 3px;
+        font-size: smaller;
+    }
+
+    th h4{
+        font-size: 0.8rem;
+        margin: 0;
+    }
+
+    .btn-warning, #btnConfirm{
+        padding: 2px !important;
+ 
+    }
+    .btn-warning{
+        margin-bottom: 2px !important;
+    }
+
+    
+.tit{
+    font-family: "Fenix", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+thead{
+    background-color: #8AA6A3;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+    border-radius: 3px;
+}
+
+.tablaEmpleados{
+    width: 100%;
+    margin: 0;
+
+}
+
+.Encabezado th{
+    font-family: "Fenix", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+
+
+}
+
+.tablaEmpleados td, .tablaEmpleados th{
+    vertical-align: middle !important;
+    text-align: center;
+    padding: 5px;
+}
+
+.tablaEmpleados td{
+    border: solid gainsboro 0.1rem
+}
+
+#btnConfirm, .btn-warning, #MostrarMas{
+    font-size: 0.6rem;
+    padding: 5px;
+    margin: 0;
+
+}
+
+/*  */
+
+
+
+
+.grid-mostrar{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin: auto;
+    gap: 0.3rem;
+}
+
+.dato-empleado-foto{
+
+    text-align: center;
+    margin-top: 20px;
+
+}
+.dato-empleado-foto h2{
+    font-size: 1.1rem;
+    margin-top: 16px;
+}
+
+.dato-empleado-foto img{
+    width: 100%;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.dato-empleado{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width: 80%;
+    background-color: #8FC1B5;
+    border-radius: 3px;
+    text-align: center;
+    border: 10px solid #F2F2F2;
+}
+
+.dato-empleado td{
+    padding: 3px;
+
+
+}
+
+.dato-empleado h5{
+    text-align: center;
+    font-size: 0.6rem;
+}
+
+
+.flex{
+    display: flex;
+    justify-content: center;
+}
+
+#botonRegresar{
+    margin-top: 1.5rem;
+    width: auto;
+    text-align: center;
+    font-size: small;
+}
+
+
+    
+        /*  */
+
+        .footer{
+            margin-top: 2.5rem;
+            height: 9rem;
+        }
+
+        
+        .footer h1, .footer a{
+            font-size: 0.7rem;
+        }
+    
+        .footer h1{
+            width: 100%;
+        }
+    
+        .logos{
+            margin: 0;
+            background-color: #10403B;
+            padding: 0;
+            border-radius: 0;
+            border: solid white 0.1rem;
+        }
+    
+        .footer div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 0.5rem;
+            width: 100%;
+            height: fit-content;
+        }
+    
+        .log h1{
+            width: 100%;
+        }
+
+
+    
+    }
