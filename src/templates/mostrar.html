@@ -1,0 +1,54 @@
+
+
+{% include 'header.html' %}
+
+
+{% for empleado in empleados %}
+
+<div class="grid-mostrar">
+
+
+        <div class="dato-empleado-foto">
+            <img width="100" src="fotodeusuario/{{empleado[3]}}" alt="foto de perfil">
+            <h2>{{empleado[1]}}</h2>
+        </div>
+
+        <table class="tablaDatos">
+            <tr class="dato-empleado">
+                <td><h5>ID: {{empleado[0]}}</h5></td>
+            </tr>
+
+            <tr class="dato-empleado">
+                <td><h5>Correo: {{empleado[2]}}</h5></td>
+            </tr>
+
+            
+            <tr class="dato-empleado">
+                <td><h5>Cargo: {{empleado[7]}}</h5></td>
+            </tr>
+
+            <tr class="dato-empleado">
+                <td><h5>Domicilio: {{empleado[4]}}</h5></td>
+            </tr>
+
+            <tr class="dato-empleado">
+                <td><h5>Fecha de nacimiento: {{empleado[5]}}</h5></td>
+            </tr>
+
+            
+            <tr class="dato-empleado">
+                <td><h5>Fecha de ingreso: {{empleado[6]}}</h5></td>
+            </tr>
+
+        </table>
+
+</div>
+
+<div class="flex">
+    <a id="botonRegresar" class="btn btn-primary" href="{{url_for('index')}}">Regresar</a>
+</div>
+
+
+{% include 'footer.html' %}
+
+{% endfor %}

@@ -11,8 +11,6 @@
 {% endwith %}
 
 <form action="/Empleados/crearEmpleado" method="POST" enctype="multipart/form-data">
-
-<div class="añadirEmp">
   
     <div class="Formulario">
 
@@ -20,27 +18,57 @@
                 <h2>Añadir empleado</h2>
             </div>
             
-            <div>
+            <div class="inpFormu">
                 <label for="txtnombre">Nombre:</label>
                 <input class="formInput" type="text" name="txtnombre" id="txtnombre">
             </div>
-            <div>
+            <div class="inpFormu">
                 <label for="txtcorreo">Email:</label>
                 <input class="formInput" type="email" name="txtcorreo" id="txtcorreo">            
             </div>
-            <div>
-                <label for="txtfoto">Foto de perfil:</label>
-                <input type="file" name="txtfoto" id="txtfoto">            
+
+            <div class="inpFormu">
+                <label for="txtDomicilio">Domicilio:</label>
+                <input class="formInput" type="text" name="txtDomicilio" id="txtDomicilio">            
             </div>
+
+            <div class="inpFormu">
+                <label for="txtNacimiento">Fecha de nacimiento:</label>
+                <input class="formInput" type="date" name="txtNacimiento" id="txtNacimiento">            
+            </div>
+
+            <div class="inpFormu">
+                <label for="txtIngreso">Fecha de ingreso:</label>
+                <input class="formInput" type="date" name="txtIngreso" id="txtIngreso">            
+            </div>
+
+
+            <div class="inpFormu">
+                <label for="txtCargo">Cargo:</label>
+                <select class="formInput" type="text" name="txtCargo" id="txtCargo">
+                    <option value="Chef">Chef</option>
+                    <option value="Cocinero/a">Cocinero/a</option>      
+                    <option value="Administracion">Administracion</option>      
+            </div>
+
+            <div class="inpFormu">
+                <label for="txtFoto">Foto de perfil: </label>
+                    <input type="file" name="txtFoto" id="txtFoto">            
+            </div>
+
             <div class="botones">
-                <input class="btn btn-success" type="submit" value="Agregar nuevo empleado">
-                <a class="btn btn-primary" href="{{url_for('index')}}">Regresar</a>
-        
+            
+                    <input class="btn btn-success" type="submit" value="Agregar nuevo empleado">
+                    <a class="btn btn-primary" href="{{url_for('index')}}">Regresar</a>
+            
             </div>
+
+            
+
     </div>
 
 
-</div>
 </form>
+
 
 {% include 'footer.html' %}

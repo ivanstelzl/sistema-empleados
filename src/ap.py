@@ -22,8 +22,8 @@ mysql = MySQL(app)
 
 @app.route('/fotodeusuario/<path:foto>')
 def uploads(foto):
+       print(foto)
        return send_from_directory(os.path.join('uploads'), foto)
-
 
 
 @app.route('/Empleados')
@@ -49,10 +49,14 @@ def alta_empleado():
         
                 nombre = request.form["txtnombre"]
                 correo = request.form["txtcorreo"]
-                foto = request.files["txtfoto"]
+                foto = request.files["txtFoto"]
+                domicilio = request.form["txtDomicilio"]
+                nacimiento = request.form["txtNacimiento"]
+                ingreso = request.form["txtIngreso"]
+                cargo = request.form["txtCargo"]
 
-                if nombre == "" or correo =="":
-                       flash("El nombre y el correo son obligatorios.")
+                if nombre == "" or correo =="" or domicilio == "" or nacimiento == "" or ingreso == "":
+                       flash("Todos los campos son obligatorios.")
                        return redirect(url_for("alta_empleado"))
 
                 now = datetime.now()
@@ -63,8 +67,8 @@ def alta_empleado():
                         foto.save("uploads/" + nuevoNombreFoto)   
 
                 cur = mysql.connection.cursor()
-                cur.execute('INSERT INTO empleados (nombre, correo, foto) VALUES (%s, %s, %s)', 
-                                (nombre, correo, nuevoNombreFoto))
+                cur.execute('INSERT INTO empleados (nombre, correo, foto, domicilio, nacimiento, ingreso, cargo) VALUES (%s, %s, %s, %s, %s, %s, %s)', 
+                                (nombre, correo, nuevoNombreFoto, domicilio, nacimiento, ingreso, cargo))
                 
                 mysql.connection.commit()
 
@@ -96,6 +100,24 @@ def delete(id):
         return redirect("/Empleados")
 
 
+@app.route('/mostrarMas/<id>')
+def mostrar(id):
+       
+        sql= f'SELECT * FROM empleados WHERE id="{id}"'
+       
+        cur = mysql.connection.cursor()
+        cur.execute(sql)
+        empleados = cur.fetchall()
+
+        mysql.connection.commit()
+
+
+        return render_template("mostrar.html", empleados=empleados)
+
+
+
+
+
 @app.route('/modify/<id>')
 def modify(id):
        
@@ -116,6 +138,10 @@ def update():
         correo = request.form["txtcorreo"]
         foto = request.files["txtfoto"]
         id = request.form["txtid"]
+        domicilio = request.form["txtDomicilio"]
+        nacimiento = request.form["txtNacimiento"]
+        ingreso = request.form["txtIngreso"]
+        cargo = request.form["txtCargo"]
 
         cur = mysql.connection.cursor()
 
@@ -145,7 +171,7 @@ def update():
                 cur.execute(sql)
                 mysql.connection.commit()
         
-        sql = f'UPDATE empleados SET nombre="{nombre}", correo="{correo}" WHERE id="{id}"'
+        sql = f'UPDATE empleados SET nombre="{nombre}", correo="{correo}", domicilio="{domicilio}", nacimiento="{nacimiento}", ingreso="{ingreso}", cargo="{cargo}" WHERE id="{id}"'
 
         cur.execute(sql)
         mysql.connection.commit()

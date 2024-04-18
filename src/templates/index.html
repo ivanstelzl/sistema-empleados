@@ -1,15 +1,19 @@
 
 {% include 'header.html' %}
 
+
+
 <h1 class="tit">Tabla de empleados</h1>
 
     <table class="tablaEmpleados">
         <thead>
             <tr class="Encabezado">
-                <th><h5>#</h5</th>
-                <th><h5>Foto</h5</th>
-                <th><h5>Nombre</h5</th>
-                <th><h5>Correo</h5</th>
+                <th><h4>#</h4></th>
+                <th><h4>Foto</h4></th>
+                <th><h4>Nombre</h4></th>
+                <th><h4>Correo</h4></th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -22,16 +26,13 @@
                 <td>{{empleado[1]}}</td>
                 <td>{{empleado[2]}}</td>
                 <td>
-                    <a class="btn btn-success" href="">Mostrar más</a>
+                    <a id="MostrarMas" class="btn btn-success" href="/mostrarMas/{{empleado[0]}}">Mostrar más</a>
                 </td>
                 <td>
                     <a class="btn btn-warning" href="/modify/{{empleado[0]}}">Editar</a>
                     
                     <a id="btnConfirm" class="btn btn-danger" href="/delete/{{empleado[0]}}">Borrar</a>
                 </td>
-            </tr>
-            <tr class="oculto">
-                <td>hola</td>
             </tr>
             
             

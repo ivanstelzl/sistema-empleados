@@ -21,16 +21,14 @@
         <nav>
 
             <div class="titulo">
-
-                <img src="logosebedelicioso.png" alt="logo">
-                <h1><a href="index.html" href="{{url_for('index')}}" class="sebe">Se Be delicioso</a></h1>
+                <h1><a  href="{{url_for('index')}}" class="sebe">Se Be delicioso</a></h1>
 
             </div>
 
             <table>
                 <tr>
-                    <td class="ini"><a href="{{url_for('index')}}">Empleados</a></td>
-                    <td class="prod"><a href="{{url_for('alta_empleado')}}">Alta empleados</a></td>
+                    <td name="a" id="a" class="busqueda"><a class="a" href="{{url_for('index')}}">Empleados</a></td>
+                    <td id="b" class="busqueda"><a class="a" href="{{url_for('alta_empleado')}}">Alta empleados</a></td>
                 </tr>
             </table>
         </nav>
